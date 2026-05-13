@@ -1,0 +1,35 @@
+# =========================
+# Dependencies
+# =========================
+server/node_modules
+
+# =========================
+# Environment Variables
+# =========================
+server/.env
+
+# =========================
+# Logs
+# =========================
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# =========================
+# OS Generated Files
+# =========================
+.DS_Store
+Thumbs.db
+
+# =========================
+# Editor / IDE Files
+# =========================
+.vscode/
+.idea/
+
+# =========================
+# Optional Build Folders
+# =========================
+dist/
+build/
