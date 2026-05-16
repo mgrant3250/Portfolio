@@ -58,6 +58,21 @@ nav {
   color: #007c91;
 }
 
+section {
+  padding: 7rem 10%;
+}
+
+section + section {
+  margin-top: 5rem;
+}
+
+section h2{
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: -0.02em;
+}
+
 
 
 /* Contact Form */
@@ -126,6 +141,11 @@ button:hover {
     width: 40%;
 
 }
+
+.hero-p{
+  margin-bottom: 10px;
+}
+
 
 /* Hero End */
 
@@ -247,10 +267,26 @@ button:hover {
   gap: 2rem;
 }
 
+.project {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+  backdrop-filter: blur(12px);
 
+  max-width: 900px;
+  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
 .project:hover {
-  transform: translateY(-5px);
+  transform: translateY(-6px);
+  box-shadow: 0 14px 40px rgba(0,0,0,0.18);
 }
 
 
@@ -280,6 +316,7 @@ button:hover {
 
 .project h3 {
   font-size: 2rem;
+  margin-bottom: 0.5rem;
   color: #222;
 }
 
@@ -292,31 +329,45 @@ button:hover {
   box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 
-.project {
-  background: rgba(255, 255, 255, 0.8);
-  border-radius: 20px;
-  padding: 2rem;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.12);
-  backdrop-filter: blur(12px);
-
-  max-width: 900px;
-  margin: 0 auto;
-
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-
-  transition: transform 0.3s ease;
-}
-
 .featured-project:hover {
   transform: translateY(-6px);
+}
+
+.featured-project{
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-project::before{
+  content: "FEATURED";
+
+  position: absolute;
+  top: 22px;
+  right: -55px;
+
+  width: 200px;
+  padding: 0.5rem 0;
+
+  background: #0077B5;
+  color: white;
+
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  transform: rotate(45deg);
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+
+  z-index: 10;
 }
 
 .project-summary {
   font-size: 1.05rem;
   color: #444;
   line-height: 1.7;
+  opacity: 0.9;
 }
 
 .project-features {
@@ -444,7 +495,6 @@ footer {
     margin-top: 1rem;
   }
 
-  @media (max-width: 768px) {
   .skill,
   .project {
     padding: 1.2rem;
@@ -453,7 +503,6 @@ footer {
   .skill-head {
     font-size: 1.25rem;
   }
-}
 }
 
 @media (max-width: 900px) {
